@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>클럽하와이 · WEB OPEN SHOWCASE | VIP 원장님 초대장</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;800;900&family=Noto+Serif+KR:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --pink-1:#ff96bd;--pink-2:#f26fa1;--pink-3:#e85a94;--pink-4:#d94486;
+    --pink-soft:#ffeaf2;--pink-bg:#fff5f8;
+    --ink:#2c2c33;--ink-2:#55555f;--muted:#9aa0a8;--line:#f2dbe6;--posterw:800px;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:'Noto Sans KR',system-ui,sans-serif;background:#efe7ea;color:var(--ink);line-height:1.6;-webkit-font-smoothing:antialiased}
+
+  .poster{max-width:var(--posterw);margin:0 auto;position:relative;overflow:hidden;background:#ffffff}
+  .wrap{position:relative;z-index:1;padding:0 46px}
+  .block{padding:0}
+
+  .serif{font-family:'Noto Serif KR',serif}
+  .pink-text{background:linear-gradient(180deg,var(--pink-1),var(--pink-3));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent}
+  .eyebrow{font-size:12.5px;letter-spacing:.26em;color:var(--pink-2);font-weight:800;text-transform:uppercase}
+
+  .ribbon{background:linear-gradient(90deg,#f26fa1,#e85a94);color:#fff;text-align:center;padding:11px;font-size:12px;font-weight:800;letter-spacing:.22em;position:relative;z-index:1}
+
+  /* HERO */
+  .hero{padding:56px 0 46px;text-align:center}
+  .brand-line{font-size:12.5px;letter-spacing:.2em;color:var(--pink-2);font-weight:800}
+  .badge{display:inline-flex;align-items:center;gap:8px;margin:20px 0 6px;padding:9px 22px;border-radius:999px;background:#fff;border:1.5px solid var(--pink-2);color:var(--pink-3);font-size:13px;font-weight:900;letter-spacing:.08em;box-shadow:0 8px 22px rgba(242,111,161,.22)}
+  .gem{width:64px;height:64px;filter:drop-shadow(0 10px 16px rgba(242,111,161,.35));margin:14px 0 8px}
+  .logo{height:120px;width:auto;object-fit:contain;margin:14px 0 8px}
+  .hero h1{font-weight:900;font-size:44px;line-height:1.28;letter-spacing:-.015em;margin-top:6px}
+  .hero .sub{color:var(--ink-2);font-size:16.5px;margin-top:20px}
+  .hero .sub strong{color:var(--pink-3);font-weight:800}
+  .divider-orn{display:flex;align-items:center;justify-content:center;gap:14px;margin:30px auto;max-width:220px;color:var(--pink-1);font-size:12px}
+  .divider-orn::before,.divider-orn::after{content:"";height:1px;flex:1;background:linear-gradient(90deg,transparent,rgba(242,111,161,.45))}
+  .divider-orn::after{background:linear-gradient(90deg,rgba(242,111,161,.45),transparent)}
+
+  /* POSITIONING / VIP invite card */
+  .invite{margin-top:12px;padding:44px 40px;border-radius:24px;text-align:center;background:linear-gradient(180deg,#fff,#fff4f8);border:1.5px solid #f6d7e3;box-shadow:0 20px 46px rgba(210,120,160,.14)}
+  .invite .q{font-family:'Noto Serif KR',serif;font-size:23px;font-weight:700;line-height:1.5;color:var(--ink)}
+  .invite p{color:var(--ink-2);font-size:15.5px;margin-top:18px}
+  .invite p strong{color:var(--pink-3);font-weight:800}
+
+  .sec-head{text-align:center;margin:64px 0 0}
+  .sec-head h2{font-weight:900;font-size:30px;line-height:1.32;letter-spacing:-.01em;margin-top:12px}
+
+  /* PREVIEW */
+  .browser{width:100%;margin-top:28px;border-radius:16px;overflow:hidden;border:1px solid #ecd7e1;background:#fff;box-shadow:0 24px 48px rgba(210,120,160,.22)}
+  .browser .bar{display:flex;align-items:center;gap:7px;padding:12px 15px;background:#fbf1f5;border-bottom:1px solid #f2e2ea}
+  .browser .dot{width:11px;height:11px;border-radius:50%}
+  .browser .url{margin-left:8px;flex:1;background:#fff;border:1px solid #f0e0e8;border-radius:999px;font-size:12px;color:var(--muted);padding:6px 14px;text-align:center;font-weight:600}
+  .shot{display:block;width:100%;aspect-ratio:16/9;object-fit:cover}
+  .mock{display:flex;flex-direction:column;text-align:left;background:#fff}
+  .m-nav{display:flex;align-items:center;gap:8px;padding:14px 20px;border-bottom:1px solid #f4e7ee;font-size:13px}
+  .m-nav b{color:var(--pink-3);font-weight:900}.m-nav .sp{flex:1}
+  .m-nav em{font-style:normal;color:var(--muted);font-size:11px;border:1px solid #f0e0e8;padding:4px 11px;border-radius:999px}
+  .m-hero{padding:30px 24px 22px;background:linear-gradient(180deg,#fff,#fff4f8)}
+  .m-h1{font-size:20px;font-weight:900;line-height:1.35}
+  .m-sub{font-size:12px;color:var(--muted);margin-top:8px}
+  .m-btn{display:inline-block;margin-top:16px;background:linear-gradient(180deg,#ff9cc0,#ea5f96);color:#fff;font-size:12px;font-weight:800;padding:8px 18px;border-radius:999px}
+  .m-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;padding:18px 24px 24px}
+  .m-cards div{height:66px;border-radius:10px;background:#fdeef4;border:1px solid #f6dbe6}
+  .note{margin-top:16px;font-size:13px;color:var(--muted);text-align:center}
+  .note b{color:var(--pink-3);font-weight:800}
+
+  /* MORE (continues in August) */
+  .more{margin-top:26px;padding:40px;border-radius:24px;text-align:center;background:linear-gradient(180deg,#fff,#fff6f9);border:1.5px solid #f6d7e3;box-shadow:0 16px 38px rgba(210,120,160,.10)}
+  .more h3{font-size:24px;font-weight:900;line-height:1.35}
+  .more .lead{color:var(--ink-2);font-size:15px;margin-top:14px}
+  .more .lead strong{color:var(--pink-3);font-weight:800}
+  .steps{display:flex;gap:12px;justify-content:center;margin-top:26px;flex-wrap:wrap}
+  .step{flex:1;min-width:150px;background:var(--pink-bg);border:1px solid var(--line);border-radius:16px;padding:20px 16px}
+  .step .m{font-weight:900;color:var(--pink-3);font-size:16px}
+  .step .d{font-size:13px;color:var(--ink-2);margin-top:8px;line-height:1.5}
+
+  /* BENEFITS */
+  .benefits{display:flex;flex-direction:column;gap:14px;margin-top:26px}
+  .benefit{display:flex;gap:20px;align-items:center;background:#fff;border:1px solid var(--line);border-radius:16px;padding:22px 26px;box-shadow:0 8px 20px rgba(210,120,160,.06)}
+  .benefit .ic{flex:0 0 auto;width:50px;height:50px;border-radius:14px;background:linear-gradient(180deg,#ff9cc0,#ea5f96);display:flex;align-items:center;justify-content:center;box-shadow:0 6px 14px rgba(242,111,161,.3)}
+  .benefit .ic svg{width:24px;height:24px;stroke:#fff;fill:none;stroke-width:1.8}
+  .benefit h4{font-size:18px;font-weight:800;display:flex;align-items:center;gap:9px}
+  .benefit h4 .no{color:var(--pink-2);font-weight:900;font-size:15px}
+  .benefit p{color:var(--ink-2);font-size:14.5px;margin-top:5px}
+
+  /* AUDIENCE */
+  .aud-list{list-style:none;margin-top:26px;display:flex;flex-direction:column;gap:16px}
+  .aud-list li{display:flex;gap:15px;align-items:flex-start;font-size:16px;color:var(--ink-2);line-height:1.55;background:#fff;border:1px solid var(--line);border-radius:14px;padding:18px 22px;box-shadow:0 6px 16px rgba(210,120,160,.05)}
+  .aud-list li .ck{flex:0 0 auto;width:26px;height:26px;border-radius:50%;background:linear-gradient(180deg,#ff9cc0,#ea5f96);color:#fff;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:900;margin-top:1px}
+  .aud-list li strong{color:var(--ink);font-weight:800}
+
+  /* EVENT INFO */
+  .info-card{margin-top:26px;border:1px solid var(--line);border-radius:18px;overflow:hidden;background:#fff;box-shadow:0 12px 28px rgba(210,120,160,.08)}
+  .info-row{display:grid;grid-template-columns:96px 1fr;padding:18px 26px;border-bottom:1px solid #f6ebf1}
+  .info-row:last-child{border-bottom:none}
+  .info-row .k{color:var(--pink-2);font-weight:800;font-size:14.5px;display:flex;align-items:center}
+  .info-row .v{color:var(--ink);font-size:16px;font-weight:600}
+  .info-row .v small{display:block;color:var(--muted);font-size:13px;font-weight:400;margin-top:3px}
+  .badge-limited{display:inline-block;margin-left:6px;font-size:12px;font-weight:800;color:var(--pink-3);background:var(--pink-soft);border:1px solid rgba(242,111,161,.3);padding:2px 10px;border-radius:999px;vertical-align:middle}
+
+  /* APPLY */
+  .apply{margin-top:60px;padding:52px 40px 56px;border-radius:26px;text-align:center;background:linear-gradient(180deg,#fff0f6,#ffe3ee);border:1.5px solid #f6cfdf;box-shadow:0 22px 50px rgba(233,90,148,.18)}
+  .apply .pill{display:inline-flex;padding:8px 20px;border-radius:999px;background:#fff;border:1px solid rgba(242,111,161,.35);color:var(--pink-3);font-size:12px;font-weight:800;letter-spacing:.12em;margin-bottom:16px}
+  .apply h2{font-weight:900;font-size:32px;line-height:1.3;letter-spacing:-.01em}
+  .gift-line{margin-top:12px;font-family:'Noto Serif KR',serif;font-size:19px;font-weight:600;line-height:1.5}
+  .apply .desc{color:var(--ink-2);font-size:15.5px;margin-top:16px}
+  .seats{display:inline-flex;align-items:center;gap:8px;margin:24px 0;color:var(--pink-3);font-weight:800;font-size:14.5px;border:1px solid rgba(242,111,161,.35);border-radius:999px;padding:11px 24px;background:#fff}
+  .seats b{font-weight:900;font-size:17px;color:var(--pink-3)}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:18px 54px;border-radius:999px;font-size:18px;font-weight:900;color:#fff;background:linear-gradient(180deg,#ff9cc0 0%,#f26fa1 55%,#ea5f96 100%);box-shadow:0 14px 30px rgba(233,90,148,.4);border:none;cursor:pointer;text-decoration:none}
+  .fine{color:var(--muted);font-size:13px;margin-top:18px}
+
+  footer{text-align:center;padding:34px 28px 44px;color:var(--muted);font-size:12.5px;line-height:1.9}
+  footer .brand{color:var(--pink-2);font-weight:800;letter-spacing:.18em}
+
+  @media (max-width:640px){
+    .wrap{padding:0 24px}.ribbon{letter-spacing:.14em;font-size:11px}
+    .hero{padding:44px 0 36px}.hero h1{font-size:33px}
+    .invite{padding:34px 26px}.invite .q{font-size:20px}
+    .sec-head h2{font-size:25px}.more{padding:32px 24px}.more h3{font-size:21px}
+    .apply{padding:42px 26px 46px}.apply h2{font-size:26px}.btn{padding:16px 40px;font-size:16px}
+  }
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute">
+  <defs>
+    <linearGradient id="gemG" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffb0cd"/><stop offset="1" stop-color="#e85a94"/></linearGradient>
+    <symbol id="gem" viewBox="0 0 100 100">
+      <path d="M30 12 H70 L88 38 L50 92 L12 38 Z" fill="url(#gemG)"/>
+      <path d="M30 12 L38 38 H12 Z M70 12 L62 38 H88 Z M38 38 H62 L50 92 Z M38 38 L50 92 L12 38 Z M62 38 L88 38 L50 92 Z" fill="#ffffff" opacity=".16"/>
+      <path d="M12 38 H88" stroke="#ffffff" stroke-opacity=".35" stroke-width="1.4" fill="none"/>
+    </symbol>
+  </defs>
+</svg>
+
+<div class="poster">
+
+  <div class="ribbon">CLUB HAWAII · VIP ONLY INVITATION</div>
+
+  <div class="wrap">
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="brand-line">WEB OPEN SHOWCASE</div>
+      <div class="badge">◆ VIP 원장님 초대장 ◆</div>
+      <div><img class="logo" src="logo.webp" alt="클럽하와이"></div>
+      <h1>새로워진 클럽하와이,<br><span class="pink-text">VIP 원장님을<br>특별 초대합니다</span></h1>
+      <p class="sub"><strong>원장님의 고민을 실행 가능한 결과로 바꾸는 데이터 센터.</strong><br>관심 가져주신 원장님을 <strong>VIP로 모셔</strong> 새 웹을 가장 먼저 보여드립니다.</p>
+      <div class="divider-orn">◆</div>
+    </section>
+
+    <!-- POSITIONING / VIP invite -->
+    <section class="invite">
+      <div class="q">클럽하와이는,<br><span class="pink-text">원장님의 고민을</span><br>실행 가능한 결과로 바꾸는 데이터 센터입니다.</div>
+      <p>홍보 · 운영 · 경영 · 상담까지, 흩어져 있던 고민을<br>
+        데이터로 정리하고 <strong>곧장 실행할 수 있는 결과</strong>로 바꿔드립니다.<br>
+        그 클럽하와이의 새 웹을, <strong>VIP 원장님께 가장 먼저</strong> 보여드립니다.</p>
+    </section>
+
+    <!-- WEB PREVIEW -->
+    <section class="block">
+      <div class="sec-head">
+        <div class="eyebrow">New Web Preview</div>
+        <h2>무엇이 달라졌는지,<br><span class="pink-text">현장에서 가장 먼저</span></h2>
+      </div>
+      <div class="browser">
+        <div class="bar">
+          <span class="dot" style="background:#ff5f57"></span>
+          <span class="dot" style="background:#febc2e"></span>
+          <span class="dot" style="background:#28c840"></span>
+          <span class="url">clubhawaii.co.kr</span>
+        </div>
+        <!-- ▼ 실제 스크린샷으로 교체: <img class="shot" src="web-screenshot.png" alt="새 웹 화면"> ▼ -->
+        <div class="shot mock">
+          <div class="m-nav"><b>클럽하와이</b><span class="sp"></span><em>로그인</em></div>
+          <div class="m-hero">
+            <div class="m-h1">원장님의 고민을, 실행 가능한 결과로</div>
+            <div class="m-sub">홍보 · 운영 · 경영 · 상담 데이터를 한 곳에서</div>
+            <span class="m-btn">둘러보기</span>
+          </div>
+          <div class="m-cards"><div></div><div></div><div></div></div>
+        </div>
+      </div>
+      <p class="note"><b>실제 화면은 현장에서 최초 공개됩니다!</b></p>
+    </section>
+
+    <!-- MORE (August & beyond) -->
+    <section class="more">
+      <div class="eyebrow">This is Just the Beginning</div>
+      <h3 style="margin-top:12px">새로워진 클럽하와이,<br><span class="pink-text">이제 시작입니다</span></h3>
+      <p class="lead">이번 시연회가 끝이 아니에요. 클럽하와이는 계속 바뀌고,<br>새로워지는 웹 시연회도 앞으로 계속 이어집니다.<br><br>이번에 <strong>시간이 안 되시는 원장님</strong>은,<br>다음 자리에서 편하게 만나요.</p>
+    </section>
+
+    <!-- BENEFITS -->
+    <section class="block">
+      <div class="sec-head">
+        <div class="eyebrow">What You Get</div>
+        <h2>이 자리에서 <span class="pink-text">얻어 가시는 것</span></h2>
+      </div>
+      <div class="benefits">
+        <div class="benefit">
+          <div class="ic"><svg viewBox="0 0 24 24"><path d="M12 3 2 8l10 5 10-5-10-5Z"/><path d="M2 16l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg></div>
+          <div><h4><span class="no">01</span> 새 웹 시연 직접 보기</h4><p>무엇이, 어떻게 좋아졌는지 현장에서 직접 확인</p></div>
+        </div>
+        <div class="benefit">
+          <div class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M15.5 8.5l-2 5-5 2 2-5 5-2Z"/></svg></div>
+          <div><h4><span class="no">02</span> 바로 쓰는 활용법</h4><p>우리 학원에 곧장 적용할 아이디어 얻어가기</p></div>
+        </div>
+        <div class="benefit">
+          <div class="ic"><svg viewBox="0 0 24 24"><path d="M20 12v9H4v-9"/><path d="M2 7h20v5H2z"/><path d="M12 22V7"/><path d="M12 7S10.5 3 8 3a2.5 2.5 0 0 0 0 5m4-1s1.5-4 4-4a2.5 2.5 0 0 1 0 5"/></svg></div>
+          <div><h4><span class="no">03</span> 참석 선물</h4><p>함께해 주신 원장님께 드리는 감사의 마음</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- AUDIENCE -->
+    <section class="block">
+      <div class="sec-head">
+        <div class="eyebrow">Invitation</div>
+        <h2>이런 분들을 <span class="pink-text">모십니다</span></h2>
+      </div>
+      <ul class="aud-list">
+        <li><span class="ck">✓</span><span>클럽하와이에 <strong>관심 가져주신 원장님을 VIP로</strong> 모시는 자리예요.</span></li>
+        <li><span class="ck">✓</span><span><strong>선착순 15개 학원 원장님</strong>만 참석하실 수 있어요.</span></li>
+        <li><span class="ck">✓</span><span>소수 인원으로 진행해, 궁금한 점은 <strong>그 자리에서 편하게</strong> 여쭤보세요.</span></li>
+      </ul>
+    </section>
+
+    <!-- EVENT INFO -->
+    <section class="block">
+      <div class="sec-head">
+        <div class="eyebrow">Event Info</div>
+        <h2>행사 안내</h2>
+      </div>
+      <div class="info-card">
+        <div class="info-row"><div class="k">일시</div><div class="v">2026년 7월 24일 (금) 오전 10:00 ~</div></div>
+        <div class="info-row"><div class="k">장소</div><div class="v">광명 L7호텔 8층</div></div>
+        <div class="info-row"><div class="k">정원</div><div class="v">선착순 15개 학원 원장님</div></div>
+        <div class="info-row"><div class="k">대상</div><div class="v">초대받으신 VIP 원장님</div></div>
+      </div>
+    </section>
+
+    <!-- APPLY -->
+    <section class="apply">
+      <div class="pill">VIP 참석 신청</div>
+      <h2>지금 <span class="pink-text">참석 신청하세요</span></h2>
+      <p class="gift-line pink-text">가벼운 걸음으로 오셔서, 가득 안고 돌아가세요</p>
+      <p class="desc">자리는 단 15개 학원 원장님.<br>초대받으신 VIP 원장님을 먼저 모십니다.</p>
+      <div class="seats">먼저 신청하신 <b>VIP 원장님</b>부터 확정</div><br>
+      <a href="https://isyouedu.co.kr/product/클럽하와이-new-웹-vip-시연회/" class="btn" target="_blank" rel="noopener">VIP 참석 신청하기 ›</a>
+      <p class="fine">마감 전에 신청해 주시기 바랍니다.</p>
+    </section>
+
+  </div>
+
+  <footer>
+    <div class="brand">CLUB HAWAII</div>
+    WEB OPEN SHOWCASE · 2026. 07. 24 (금) · 광명 L7호텔 8F
+  </footer>
+
+</div>
+</body>
+</html>
